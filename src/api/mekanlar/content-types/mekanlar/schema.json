@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mekanlars",
+  "info": {
+    "singularName": "mekanlar",
+    "pluralName": "mekanlars",
+    "displayName": "Mekanlar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "mekan_adi": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "aciklama": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "puan": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "kapak_resmi": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sehirler": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sehirler.sehirler"
+    }
+  }
+}
