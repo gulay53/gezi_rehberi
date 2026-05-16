@@ -58,6 +58,14 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::sehirler.sehirler"
+    },
+    "aciklama_en": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
