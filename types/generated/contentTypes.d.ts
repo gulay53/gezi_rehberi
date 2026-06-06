@@ -452,12 +452,6 @@ export interface ApiMekanlarMekanlar extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    aciklama_en: Schema.Attribute.Blocks &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -487,7 +481,7 @@ export interface ApiMekanlarMekanlar extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    sehirler: Schema.Attribute.Relation<'oneToOne', 'api::sehirler.sehirler'>;
+    sehir: Schema.Attribute.Relation<'manyToOne', 'api::sehirler.sehirler'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -530,6 +524,7 @@ export interface ApiSehirlerSehirler extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::sehirler.sehirler'
     >;
+    mekanlar: Schema.Attribute.Relation<'oneToMany', 'api::mekanlar.mekanlar'>;
     publishedAt: Schema.Attribute.DateTime;
     Ulke: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{

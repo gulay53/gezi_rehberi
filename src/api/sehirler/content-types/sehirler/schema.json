@@ -38,6 +38,12 @@
           "localized": true
         }
       }
+    },
+    "mekanlar": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mekanlar.mekanlar",
+      "mappedBy": "sehir"
     }
   }
 }
