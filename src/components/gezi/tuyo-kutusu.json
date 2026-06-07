@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_gezi_tuyo_kutusus",
+  "info": {
+    "displayName": "Tuyo Kutusu",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "tip": {
+      "type": "enumeration",
+      "enum": [
+        "Uyar",
+        "Tavsiye",
+        "Bilgi"
+      ]
+    },
+    "mesaj": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
