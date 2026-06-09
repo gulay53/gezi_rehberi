@@ -59,6 +59,17 @@
       "relation": "manyToOne",
       "target": "api::sehirler.sehirler",
       "inversedBy": "mekanlar"
+    },
+    "bilesenler": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "gezi.tuyo-kutusu"
+      ]
     }
   }
 }

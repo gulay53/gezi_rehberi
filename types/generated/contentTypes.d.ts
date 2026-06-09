@@ -452,6 +452,12 @@ export interface ApiMekanlarMekanlar extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    bilesenler: Schema.Attribute.DynamicZone<['gezi.tuyo-kutusu']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
