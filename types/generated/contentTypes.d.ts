@@ -461,9 +461,7 @@ export interface ApiMekanlarMekanlar extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    kapak_resmi: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
+    kapak_resmi: Schema.Attribute.Media<'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
